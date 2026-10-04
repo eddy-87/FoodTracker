@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Platforma superioara -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M19,7H5C4.45,7 4,7.45 4,8v1h16V8C20,7.45 19.55,7 19,7z"/>
+
+    <!-- Corpul cantarului -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M6,9l1.5,8h9L18,9H6z"/>
+
+    <!-- Baza -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M4,18h16v1.5C20,19.78 19.78,20 19.5,20h-15C4.22,20 4,19.78 4,19.5V18z"/>
+
+    <!-- Linie decorativa pe corp (indicatie gramaj) -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M9,13h6v1H9z"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="0.5"/>
+
+</vector>

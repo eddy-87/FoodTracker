@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Munch" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#4CAF50</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorOutline">#888888</item>
+        <item name="colorSurfaceVariant">#3A3A3C</item>
+    </style>
+</resources>

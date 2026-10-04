@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#1E1E1E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Drag Handle -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner_dark" />
+
+        <!-- Food Name Title -->
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nume Aliment"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Measurement Selector (Spinner) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner_dark"
+            android:paddingHorizontal="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerMeasurement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:popupBackground="#2C2C2E" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:elevation="2dp" />
+        </RelativeLayout>
+
+        <!-- Quantity Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_quantity_input"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etQuantityInput"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#686868"
+                android:hint="0"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvUnitLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="g"
+                android:textSize="20sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Calorie Display - Highlighted -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_calorie_display"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvLiveCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 kcal"
+                android:textColor="#4CAF50"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="calorii"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Macro Chips Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <!-- Protein Chip -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_macro_chip_protein"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:id="@+id/tvProt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textColor="#64B5F6"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proteine"
+                    android:textColor="#64B5F6"
+                    android:textSize="11sp"
+                    android:alpha="0.7"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Carbs Chip -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_macro_chip_carbs"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="6dp">
+
+                <TextView
+                    android:id="@+id/tvCarb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textColor="#FFB74D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carbohidrați"
+                    android:textColor="#FFB74D"
+                    android:textSize="11sp"
+                    android:alpha="0.7"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Fat Chip -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_macro_chip_fat"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:id="@+id/tvFat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0g"
+                    android:textColor="#E57373"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grăsimi"
+                    android:textColor="#E57373"
+                    android:textSize="11sp"
+                    android:alpha="0.7"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnCancelQty"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Anulează"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/bg_btn_cancel"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/btnAddQty"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Adaugă"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/bg_btn_add" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

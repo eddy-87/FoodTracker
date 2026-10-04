@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Munch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <item name="android:textColorSecondary">@color/text_grey</item>
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOutline">#888888</item>
+        <item name="colorSurfaceVariant">#3A3A3C</item>
+    </style>
+
+    <style name="Theme.Munch" parent="Base.Theme.Munch" />
+
+    <style name="ShapeAppearance.FAB.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="MunchDatePicker" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#121212</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorOnSurfaceVariant">#AAAAAA</item>
+        <item name="colorSurfaceVariant">#121212</item>
+        <item name="colorOutline">#333333</item>
+        <item name="materialCalendarHeaderLayout">@style/Munch.CalendarHeader</item>
+    </style>
+
+    <style name="Munch.CalendarHeader" parent="Widget.Material3.MaterialCalendar.HeaderLayout">
+        <item name="android:background">#121212</item>
+    </style>
+</resources>
